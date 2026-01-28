@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalsa Dental Care - Family Dental Care in San Jose</title>
+    <meta name="description" content="Professional dental care in San Jose, CA. Orthodontics, preventive care, cleanings, and family dental services. Call (408) 274-5000">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        button, a {
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+        }
+
+        button:hover:not(:disabled), a:hover {
+            transform: translateY(-2px);
+        }
+
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+
+        .header-scrolled {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="https://customer-assets.emergentagent.com/job_khalsadental/artifacts/bplh6fzd_image.png" 
+                         alt="Khalsa Dental Care" 
+                         class="h-14 w-auto">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-blue-600 font-medium">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </nav>
+
+                <!-- Call Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:4082745000" 
+                       class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-medium shadow-sm hover:shadow-md flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        (408) 274-5000
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700 hover:text-blue-600">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200 shadow-lg">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg">Home</a>
+                <a href="#about" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg">About</a>
+                <a href="#services" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg">Services</a>
+                <a href="#reviews" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg">Reviews</a>
+                <a href="#contact" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg">Contact</a>
+                <a href="tel:4082745000" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    Call (408) 274-5000
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-20 bg-gradient-to-b from-blue-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                                Family <span class="text-blue-600">Dental Care</span> in San Jose
+                            </h1>
+                            <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                                Experience compassionate, professional dental care for you and your entire family at Khalsa Dental Care.
+                            </p>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="tel:4082745000" 
+                               class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl font-semibold shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                Call Now
+                            </a>
+                            <a href="#contact" 
+                               class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg rounded-xl font-semibold flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                Schedule Appointment
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="relative">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg" 
+                                 alt="Professional dental care at Khalsa Dental Care" 
+                                 class="w-full h-auto object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-blue-100 rounded-2xl -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        About Khalsa Dental Care
+                    </h2>
+                    <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        At Khalsa Dental Care, we believe that quality dental care should be accessible, comfortable, and personalized. Our dedicated team is committed to providing gentle, professional treatment in a warm and welcoming environment.
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                    <!-- Feature 1 -->
+                    <div class="group p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all duration-300 hover:shadow-lg">
+                        <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Patient-Centered Care</h3>
+                        <p class="text-gray-600 leading-relaxed">Your comfort and wellbeing are our top priorities. We take time to listen and understand your needs.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="group p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all duration-300 hover:shadow-lg">
+                        <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Family-Friendly</h3>
+                        <p class="text-gray-600 leading-relaxed">Comprehensive dental care for patients of all ages, from children to seniors.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="group p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all duration-300 hover:shadow-lg">
+                        <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Experienced Team</h3>
+                        <p class="text-gray-600 leading-relaxed">Dr. Gurdip Narula and Dr. Rajinder Kaur Narula are licensed dental professionals providing general dental care with a focus on patient needs. They work alongside Dr. Gurpreet Narula, who provides in-house endodontic services with a state-certified license. Together, they offer coordinated care under one practice to streamline treatment and improve patient convenience. The team is committed to clear communication, comfort, and consistent clinical standards.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="group p-6 bg-blue-50 rounded-xl hover:bg-blue-100 transition-all duration-300 hover:shadow-lg">
+                        <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Trusted in San Jose</h3>
+                        <p class="text-gray-600 leading-relaxed">Proudly serving the San Jose community with quality dental care you can trust.</p>
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 md:p-12">
+                    <div class="max-w-4xl mx-auto">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                            Our Commitment to Excellence
+                        </h3>
+                        <div class="space-y-4 text-gray-700 leading-relaxed">
+                            <p>
+                                With over three decades of experience serving the San Jose community, Khalsa Dental Care has built a reputation for providing exceptional dental care that combines advanced technology with a calm, compassionate approach. The Exceptional Dentistry Registry wrote that our clinic is "an example of "Exceptional Patient Safety and Dental Office compliance!"
+                            </p>
+                            <p>
+                                We understand that visiting the dentist can be stressful for some patients. That's why we've created a comfortable, calming environment where you can feel at ease. Our team takes the time to explain procedures, answer questions, and ensure you're comfortable every step of the way.
+                            </p>
+                            <p>
+                                Whether you need a routine cleaning, restorative work, or cosmetic dentistry, we're here to help you achieve and maintain optimal oral health. Your smile is our passion.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ <!-- Services Section -->
+        <section id="services" class="py-20 bg-gradient-to-b from-white to-blue-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Our Dental Services
+                    </h2>
+                    <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        From routine check-ups to advanced treatments, we offer comprehensive dental services to keep your smile healthy and beautiful.
+                    </p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2" 
+                                 alt="Orthodontics and Braces" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Orthodontics and Braces</h3>
+                            <p class="text-gray-600 leading-relaxed">Professional orthodontic treatments including braces and aligners to straighten teeth and create beautiful, healthy smiles.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1704455306251-b4634215d98f" 
+                                 alt="Preventive Care" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Preventive Care</h3>
+                            <p class="text-gray-600 leading-relaxed">Proactive dental services to prevent issues before they start, including fluoride treatments and sealants.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/16212691/pexels-photo-16212691.png" 
+                                 alt="Cleanings & Exams" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Cleanings & Exams</h3>
+                            <p class="text-gray-600 leading-relaxed">Professional teeth cleaning and thorough examinations to maintain your oral health and bright smile.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/287237/pexels-photo-287237.jpeg" 
+                                 alt="Fillings & Restorations" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 11l3 3L22 4"></path>
+                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Fillings & Restorations</h3>
+                            <p class="text-gray-600 leading-relaxed">Quality restorative treatments including fillings, crowns, and bridges to repair and strengthen teeth.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1609840113564-ab4aba4956c4" 
+                                 alt="Cosmetic Dentistry" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Cosmetic Dentistry</h3>
+                            <p class="text-gray-600 leading-relaxed">Enhance your smile with professional cosmetic treatments including whitening and aesthetic improvements.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09" 
+                                 alt="Family Dental Care" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Family Dental Care</h3>
+                            <p class="text-gray-600 leading-relaxed">Gentle, comprehensive dental care for patients of all ages, from young children to seniors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom CTA -->
+                <div class="text-center mt-16">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Have questions about our services? We're here to help!
+                    </p>
+                    <a href="tel:4082745000" 
+                       class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl">
+                        Contact Us Today
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        What Our Patients Say
+                    </h2>
+                    <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                        Hear from our valued patients about their experiences at Khalsa Dental Care.
+                    </p>
+                </div>
+
+                <!-- Reviews Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 relative">
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                            "The Dr. Narula family is exceptional! Professional, friendly, and genuinely attentive to patients needs. They made my visit comfortable and the quality of work on my crown was outstanding."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-lg">
+                                P
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Priya S.</p>
+                                <p class="text-sm text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 relative">
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                            "Dr. Narula is a nice guy who works efficiently. Ive been using them as my dentist for years and theyve always been reliable. Great chairside manner from the entire team."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-lg">
+                                J
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">James M.</p>
+                                <p class="text-sm text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 relative">
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                            "Had my first implant here and it was a success! The in-house crown lab is convenient and the doctors are skilled. Very happy with the results."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-lg">
+                                L
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Lisa T.</p>
+                                <p class="text-sm text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 relative">
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                            "All three Dr. Narulas are wonderful - two brothers and a sister who all practice here. They are professional, caring, and make you feel at ease during procedures."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-lg">
+                                R
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Rajesh K.</p>
+                                <p class="text-sm text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 relative">
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                            "Excellent dental care! The team is knowledgeable and the office provides comprehensive services including dentures and implants. Highly recommend!"
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-lg">
+                                A
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Amanda W.</p>
+                                <p class="text-sm text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 relative">
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FCD34D" stroke="#FCD34D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                            "Great experience at Khalsa Dental Care. The doctors are skilled, the staff is friendly, and they take time to explain procedures. Very satisfied with my treatment."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-lg">
+                                M
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Mark D.</p>
+                                <p class="text-sm text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Message -->
+                <div class="text-center mt-12 bg-blue-600 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-3">
+                        Join Our Family of Satisfied Patients
+                    </h3>
+                    <p class="text-blue-100 mb-6">
+                        Experience the difference that compassionate, professional dental care can make.
+                    </p>
+                    <a href="#contact" 
+                       class="inline-block bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl">
+                        Schedule Your Visit Today
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gradient-to-b from-blue-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Visit Us Today
+                    </h2>
+                    <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        We're conveniently located in San Jose and ready to serve you. Call us to schedule your appointment.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <!-- Address -->
+                        <div class="flex gap-4 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Our Location</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    2850 Quimby Rd #145<br>
+                                    San Jose, CA 95148
+                                </p>
+                                <a href="https://maps.google.com/?q=2850+Quimby+Rd+145+San+Jose+CA+95148" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block">
+                                    Get Directions →
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex gap-4 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
+                                <a href="tel:4082745000" 
+                                   class="text-2xl font-bold text-blue-600 hover:text-blue-700">
+                                    (408) 274-5000
+                                </a>
+                                <p class="text-gray-600 mt-1">We're here to help!</p>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours -->
+                        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-gray-900">Business Hours</h3>
+                            </div>
+                            <div class="space-y-2 ml-1">
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-700 font-medium">Monday</span>
+                                    <span class="text-gray-400">Closed</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-700 font-medium">Tuesday</span>
+                                    <span class="text-gray-900 font-medium">9:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-700 font-medium">Wednesday</span>
+                                    <span class="text-gray-900 font-medium">9:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-700 font-medium">Thursday</span>
+                                    <span class="text-gray-900 font-medium">9:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-700 font-medium">Friday</span>
+                                    <span class="text-gray-900 font-medium">9:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="flex justify-between py-2 border-b border-gray-100">
+                                    <span class="text-gray-700 font-medium">Saturday</span>
+                                    <span class="text-gray-900 font-medium">8:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="flex justify-between py-2">
+                                    <span class="text-gray-700 font-medium">Sunday</span>
+                                    <span class="text-gray-400">Closed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Map & CTA -->
+                    <div class="space-y-6">
+                        <div class="bg-white p-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
+                            <div class="rounded-xl overflow-hidden h-[500px]">
+                                <iframe 
+                                    title="Khalsa Dental Care Location" 
+                                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Khalsa+Dental+Care,2850+Quimby+Rd+145,San+Jose,CA+95148" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <!-- CTA Card -->
+                        <div class="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-2xl text-white shadow-lg">
+                            <h3 class="text-2xl font-bold mb-3">Ready to Schedule?</h3>
+                            <p class="text-blue-100 mb-6">
+                                Call us today to book your appointment. We look forward to seeing you!
+                            </p>
+                            <a href="tel:4082745000" 
+                               class="w-full bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg shadow-md hover:shadow-xl flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                Call (408) 274-5000
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- About Column -->
+                <div>
+                    <img src="https://customer-assets.emergentagent.com/job_khalsadental/artifacts/bplh6fzd_image.png" 
+                         alt="Khalsa Dental Care" 
+                         class="h-14 w-auto mb-4">
+                    <p class="text-gray-400 leading-relaxed">
+                        Providing trusted, gentle dental care to the San Jose community. Your smile is our passion.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#reviews" class="text-gray-400 hover:text-white">Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="text-gray-400">
+                                2850 Quimby Rd #145<br>
+                                San Jose, CA 95148
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <a href="tel:4082745000" class="text-gray-400 hover:text-white">
+                                (408) 274-5000
+                            </a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span class="text-gray-400">
+                                Mon & Sun: Closed<br>
+                                Tue-Fri: 9:00 AM - 5:00 PM<br>
+                                Sat: 8:00 AM - 4:00 PM
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">
+                    © <span id="year"></span> Khalsa Dental Care. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
